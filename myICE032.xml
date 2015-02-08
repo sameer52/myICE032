@@ -1,102 +1,88 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="270" inline="false" x="2" y="-5">
+  <block type="controls_whileUntil" id="630" inline="false" x="6" y="83">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
-      <block type="sensor_button" id="287">
+      <block type="sensor_button" id="637">
         <field name="OBJECT">ENTER</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="controls_if" id="319" inline="false">
-        <mutation elseif="3" else="1"></mutation>
-        <value name="IF0">
-          <block type="logic_compare" id="431" inline="true">
-            <field name="OP">LT</field>
-            <value name="A">
-              <block type="sensor_object" id="329">
-                <field name="OBJECT">RIGHTSIDE</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number" id="438">
-                <field name="NUM">80</field>
-              </block>
-            </value>
-          </block>
-        </value>
-        <statement name="DO0">
-          <block type="movement_left" id="339"></block>
-        </statement>
-        <value name="IF1">
-          <block type="logic_compare" id="439" inline="true">
-            <field name="OP">LT</field>
-            <value name="A">
-              <block type="sensor_object" id="440">
-                <field name="OBJECT">LEFTSIDE</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number" id="441">
-                <field name="NUM">80</field>
-              </block>
-            </value>
-          </block>
-        </value>
-        <statement name="DO1">
-          <block type="movement_right" id="369"></block>
-        </statement>
-        <value name="IF2">
-          <block type="logic_compare" id="442" inline="true">
-            <field name="OP">LT</field>
-            <value name="A">
-              <block type="sensor_object" id="443">
-                <field name="OBJECT">RIGHTFRONT</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number" id="444">
-                <field name="NUM">80</field>
-              </block>
-            </value>
-          </block>
-        </value>
-        <statement name="DO2">
-          <block type="movement_left" id="391"></block>
-        </statement>
-        <value name="IF3">
-          <block type="logic_compare" id="445" inline="true">
-            <field name="OP">LT</field>
-            <value name="A">
-              <block type="sensor_object" id="446">
-                <field name="OBJECT">LEFTFRONT</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number" id="447">
-                <field name="NUM">80</field>
-              </block>
-            </value>
-          </block>
-        </value>
-        <statement name="DO3">
-          <block type="movement_right" id="414"></block>
-        </statement>
-        <statement name="ELSE">
-          <block type="movement_forward" id="474"></block>
-        </statement>
+      <block type="movement_left" id="493">
         <next>
-          <block type="robot_delay" id="449" inline="true">
+          <block type="robot_delay" id="495" inline="true">
             <value name="DELAY">
-              <block type="math_number" id="456">
-                <field name="NUM">100</field>
+              <block type="math_number" id="588">
+                <field name="NUM">1000</field>
               </block>
             </value>
+            <next>
+              <block type="movement_forward" id="505">
+                <next>
+                  <block type="robot_delay" id="507" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="595">
+                        <field name="NUM">1000</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="movement_left" id="517">
+                        <next>
+                          <block type="robot_delay" id="525" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="602">
+                                <field name="NUM">1000</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="movement_forward" id="545">
+                                <next>
+                                  <block type="robot_delay" id="547" inline="true">
+                                    <value name="DELAY">
+                                      <block type="math_number" id="609">
+                                        <field name="NUM">3000</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="movement_left" id="557">
+                                        <next>
+                                          <block type="robot_delay" id="568" inline="true">
+                                            <value name="DELAY">
+                                              <block type="math_number" id="616">
+                                                <field name="NUM">1000</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="movement_forward" id="579">
+                                                <next>
+                                                  <block type="robot_delay" id="581" inline="true">
+                                                    <value name="DELAY">
+                                                      <block type="math_number" id="623">
+                                                        <field name="NUM">5000</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
           </block>
         </next>
       </block>
     </statement>
-    <next>
-      <block type="movement_stop" id="424"></block>
-    </next>
   </block>
 </xml>
