@@ -1,1 +1,39 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="comment_comment" id="1" x="43" y="4">
+    <field name="TEXT">class project: get out of the maze.</field>
+    <next>
+      <block type="controls_whileUntil" id="52" inline="false">
+        <field name="MODE">UNTIL</field>
+        <value name="NUMBER">
+          <block type="sensor_button" id="61">
+            <field name="OBJECT">ENTER</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="controls_if" id="90" inline="false">
+            <mutation elseif="1"></mutation>
+            <value name="IF0">
+              <block type="sensor_object" id="104">
+                <field name="OBJECT">LEFTFRONT</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="movement_right" id="120"></block>
+            </statement>
+            <value name="IF1">
+              <block type="sensor_object" id="131">
+                <field name="OBJECT">RIGHTFRONT</field>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="movement_left" id="141"></block>
+            </statement>
+          </block>
+        </statement>
+        <next>
+          <block type="movement_stop" id="151"></block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
