@@ -1,47 +1,50 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="comment_comment" id="1" x="43" y="4">
-    <field name="TEXT">class project: get out of the maze.</field>
-    <next>
-      <block type="controls_whileUntil" id="52" inline="false">
-        <field name="MODE">UNTIL</field>
-        <value name="NUMBER">
-          <block type="sensor_button" id="61">
-            <field name="OBJECT">ENTER</field>
+  <block type="controls_whileUntil" id="270" inline="false" x="103" y="79">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="287">
+        <field name="OBJECT">ENTER</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="controls_if" id="319" inline="false">
+        <mutation elseif="3"></mutation>
+        <value name="IF0">
+          <block type="sensor_object" id="329">
+            <field name="OBJECT">RIGHTFRONT</field>
           </block>
         </value>
-        <statement name="DO">
-          <block type="controls_if" id="90" inline="false">
-            <mutation elseif="2"></mutation>
-            <value name="IF0">
-              <block type="sensor_object" id="104">
-                <field name="OBJECT">LEFTFRONT</field>
-              </block>
-            </value>
-            <statement name="DO0">
-              <block type="movement_right" id="120"></block>
-            </statement>
-            <value name="IF1">
-              <block type="sensor_object" id="131">
-                <field name="OBJECT">RIGHTFRONT</field>
-              </block>
-            </value>
-            <statement name="DO1">
-              <block type="movement_left" id="141"></block>
-            </statement>
-            <value name="IF2">
-              <block type="sensor_object" id="206">
-                <field name="OBJECT">REAR</field>
-              </block>
-            </value>
-            <statement name="DO2">
-              <block type="movement_forward" id="199"></block>
-            </statement>
-          </block>
+        <statement name="DO0">
+          <block type="movement_left" id="339"></block>
         </statement>
-        <next>
-          <block type="movement_stop" id="151"></block>
-        </next>
+        <value name="IF1">
+          <block type="sensor_object" id="350">
+            <field name="OBJECT">LEFTFRONT</field>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="movement_right" id="369"></block>
+        </statement>
+        <value name="IF2">
+          <block type="sensor_object" id="381">
+            <field name="OBJECT">RIGHTSIDE</field>
+          </block>
+        </value>
+        <statement name="DO2">
+          <block type="movement_left" id="391"></block>
+        </statement>
+        <value name="IF3">
+          <block type="sensor_object" id="404">
+            <field name="OBJECT">LEFTSIDE</field>
+          </block>
+        </value>
+        <statement name="DO3">
+          <block type="movement_right" id="414"></block>
+        </statement>
       </block>
+    </statement>
+    <next>
+      <block type="movement_stop" id="424"></block>
     </next>
   </block>
 </xml>
