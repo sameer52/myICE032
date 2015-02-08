@@ -1,91 +1,18 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="630" inline="false" x="6" y="83">
+  <block type="controls_whileUntil" id="7" inline="false" x="124" y="59">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
-      <block type="sensor_button" id="637">
+      <block type="sensor_button" id="14">
         <field name="OBJECT">ENTER</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_left" id="493">
-        <next>
-          <block type="robot_delay" id="495" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="588">
-                <field name="NUM">1000</field>
-              </block>
-            </value>
-            <next>
-              <block type="movement_forward" id="505">
-                <next>
-                  <block type="robot_delay" id="507" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="595">
-                        <field name="NUM">1000</field>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="movement_left" id="517">
-                        <next>
-                          <block type="robot_delay" id="525" inline="true">
-                            <value name="DELAY">
-                              <block type="math_number" id="602">
-                                <field name="NUM">1000</field>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="movement_forward" id="545">
-                                <next>
-                                  <block type="robot_delay" id="547" inline="true">
-                                    <value name="DELAY">
-                                      <block type="math_number" id="609">
-                                        <field name="NUM">3000</field>
-                                      </block>
-                                    </value>
-                                    <next>
-                                      <block type="movement_left" id="557">
-                                        <next>
-                                          <block type="robot_delay" id="568" inline="true">
-                                            <value name="DELAY">
-                                              <block type="math_number" id="616">
-                                                <field name="NUM">1000</field>
-                                              </block>
-                                            </value>
-                                            <next>
-                                              <block type="movement_forward" id="579">
-                                                <next>
-                                                  <block type="robot_delay" id="581" inline="true">
-                                                    <value name="DELAY">
-                                                      <block type="math_number" id="623">
-                                                        <field name="NUM">5000</field>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </next>
-                                              </block>
-                                            </next>
-                                          </block>
-                                        </next>
-                                      </block>
-                                    </next>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </next>
+      <block type="led_select" id="33" inline="true">
+        <field name="ACTION">ON</field>
       </block>
     </statement>
     <next>
-      <block type="movement_stop" id="649"></block>
+      <block type="movement_stop" id="24"></block>
     </next>
   </block>
 </xml>
