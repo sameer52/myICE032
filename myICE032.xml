@@ -11,7 +11,7 @@
         </value>
         <statement name="DO">
           <block type="controls_if" id="90" inline="false">
-            <mutation elseif="1"></mutation>
+            <mutation elseif="2"></mutation>
             <value name="IF0">
               <block type="sensor_object" id="104">
                 <field name="OBJECT">LEFTFRONT</field>
@@ -27,6 +27,14 @@
             </value>
             <statement name="DO1">
               <block type="movement_left" id="141"></block>
+            </statement>
+            <value name="IF2">
+              <block type="sensor_object" id="206">
+                <field name="OBJECT">REAR</field>
+              </block>
+            </value>
+            <statement name="DO2">
+              <block type="movement_forward" id="199"></block>
             </statement>
           </block>
         </statement>
